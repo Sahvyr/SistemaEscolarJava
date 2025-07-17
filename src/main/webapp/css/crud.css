@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Ajuste específico para labels dentro dos cards */
+.card .form-label {
+	font-weight: bold;
+	color: #f8fbf8;
+}
+
+/* Ajustes de botões dentro dos cards da área do professor */
+.card .btn {
+	width: auto;
+}
+
+/* Responsividade especial para formulário do professor */
+@media ( max-width : 768px) {
+	.card .form-control {
+		width: 100%;
+	}
+	.card .btn {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}

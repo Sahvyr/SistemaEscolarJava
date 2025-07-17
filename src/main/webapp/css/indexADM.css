@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* Fonte padrão e estilo base */
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #051119;
+	color: #f8fbf8;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* Cores base */
+.bg-midnight {
+	background-color: #151515;
+}
+
+.bg-dark-blue {
+	background-color: #051119;
+}
+
+.text-purple {
+	color: #732571;
+}
+
+/* Estilização dos cards */
+.card {
+	background-color: #151515;
+	color: #f8fbf8;
+	border-radius: 8px;
+	margin-top: 20px;
+}
+
+/* Input escuro genérico */
+.input-dark, .form-control {
+	background-color: #2d2d2d;
+	border: 1px solid #732571;
+	color: #f8fbf8;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+/* Foco nos inputs */
+.input-dark:focus, .form-control:focus {
+	background-color: #1c1c1c;
+	border-color: #9a3a9f;
+	color: #f8fbf8;
+	box-shadow: 0 0 0 2px rgba(157, 58, 159, 0.5);
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Placeholder visível e diferenciado */
+.form-control::placeholder {
+	color: #cccccc;
+	opacity: 0.8;
+}
+
+/* Botões padrão */
+.btn, .btn-purple, .btn-warning, .btn-danger {
+	padding: 12px 25px;
+	border-radius: 5px;
+	border: none;
+	color: #f8fbf8;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botão roxo */
+.btn-purple {
+	background-color: #732571;
+}
+
+.btn-purple:hover {
+	background-color: #9a3a9f;
+}
+
+/* Botão warning (amarelo) */
+.btn-warning {
+	background-color: #e0a800;
+}
+
+.btn-warning:hover {
+	background-color: #d78f00;
+}
+
+/* Botão danger (vermelho) */
+.btn-danger {
+	background-color: #dc3545;
+}
+
+.btn-danger:hover {
+	background-color: #c82333;
+}
+
+/* Botões desabilitados */
+button:disabled {
+	color: #ccc !important;
+	cursor: not-allowed;
+}
+
+button:disabled.btn-purple {
+	background-color: #5a2a5a !important;
+}
+
+button:disabled.btn-warning {
+	background-color: #8a6e1d !important;
+}
+
+button:disabled.btn-danger {
+	background-color: #9e2a47 !important;
+}
+
+/* Estilo links da navbar */
+.nav-link {
+	transition: 0.2s;
+}
+
+a.nav-link:hover, a.nav-link:focus {
+	color: #732571;
+	text-decoration: underline;
+}
+
+.dropdown-menu .dropdown-item:hover {
+	background-color: #732571 !important;
+	color: #ffffff !important;
+}
+
+/* Sidebar fixa */
+nav {
+	position: fixed;
+	width: 250px;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	overflow-y: auto;
+}
+
+/* Conteúdo principal */
+main {
+	margin-left: 250px;
+	padding: 20px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	transition: margin-left 0.3s ease;
+}
+
+/* Responsividade geral */
+@media ( max-width : 1024px) {
+	nav {
+		width: 100%;
+		position: relative;
+	}
+	main {
+		margin-left: 0;
+		padding: 15px;
+	}
+}

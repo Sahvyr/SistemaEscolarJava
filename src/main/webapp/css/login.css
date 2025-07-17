@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* GERAL */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* CORES E ESTILOS */
+.bg-dark-blue {
+	background-color: #051119;
+}
+
+.bg-midnight {
+	background-color: #151515;
+}
+
+.text-purple {
+	color: #732571;
+}
+
+.btn-purple {
+	background-color: #732571;
+	color: #f8fbf8;
+	border: none;
+}
+
+.btn-purple:hover {
+	background-color: #5e1d5b;
+	color: #f8fbf8;
+}
+
+/* FORMULÁRIO */
+input.form-control {
+	color: #f8fbf8;
+	background-color: #151515;
+}
+
+input.form-control::placeholder {
+	color: #bbb; /* contraste melhorado para acessibilidade */
+}
+
+/* BACKGROUND DA PÁGINA */
+.bg-login {
+	background-image: url('../img/loginBG.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.bg-login::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(5, 17, 25, 0.7);
+	z-index: 0;
+}
+
+/* LOGO */
+.logo-title h1 {
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #f8fbf8;
+}
+
+.logo-title img {
+	filter: drop-shadow(0 0 5px #732571);
+	max-width: 100px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 576px) {
+	.logo-title h1 {
+		font-size: 1.5rem;
+		font-weight: 500; /* Mais leve em telas pequenas */
+	}
+
+	.card h2 {
+		font-size: 1.25rem;
+	}
+
+	.card {
+		margin-top: 2rem;
+		padding: 2rem 1rem;
+	}
+}
